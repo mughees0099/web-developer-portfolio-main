@@ -182,28 +182,28 @@ const Card3 = () => {
       class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
     >
       <a
-        href="https://eclectic-mochi-f53766.netlify.app/"
+        href="https://dime-market.vercel.app/"
         target="_blank"
         rel="noreferrer"
       >
         <img
           class="rounded-t-lg w-full"
-          src="https://res.cloudinary.com/dwn3n5zdb/image/upload/v1707055635/screencapture-eclectic-mochi-f53766-netlify-app-2024-02-04-19_06_00_m98lld.png"
+          src="https://res.cloudinary.com/dwn3n5zdb/image/upload/v1731321124/Screenshot_2024-11-11_153146_z5cx9a.png"
           alt=""
         />
       </a>
       <div class="p-5">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Cara
+          Dime Market
         </h5>
 
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Cara is an elegant front-end e-commerce clothing store, offering a
-          user-friendly and interactive shopping experience, where users can
-          explore and select from a wide range of fashion products
+          Dine Market is a sophisticated e-commerce clothing store, offering a
+          seamless and interactive shopping experience, where users can explore
+          a wide range of fashion products and make purchases.
         </p>
         <a
-          href="https://eclectic-mochi-f53766.netlify.app/"
+          href="https://dime-market.vercel.app/"
           target="_blank"
           class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300"
           rel="noreferrer"

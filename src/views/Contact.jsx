@@ -8,11 +8,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className={
-        darkMode
-          ? "bg-gray-100 pt-24 md:h-screen"
-          : "bg-black pt-24 text-white md:h-screen"
-      }
+      className={darkMode ? "bg-gray-100 pt-24" : "bg-black pt-24 text-white "}
     >
       <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 ">
         <h2 className="text-5xl font-bold px-4 md:px-0 text-center z-0">
@@ -100,29 +96,19 @@ const Contact = () => {
             </form>
           </div>
           <div className="w-full flex flex-col md:items-end  mt-12 md:mt-6">
-            {/* <h1 className="text-3xl font-bold">Phone</h1>
-            <a
-              href="hello"
-              className="mb-12 mt-4 font-semibold text-blue-700 block uppercase"
-            >
-              +91 8285631499
-            </a> */}
             <h1 className="text-3xl font-bold">Email</h1>
-            <a
-              href="hello"
-              className="mb-12 mt-4 font-semibold text-blue-700 block uppercase"
-            >
+            <span className="mb-12 mt-4 font-semibold text-blue-700 block uppercase">
               mugheesj75@gmail.com
-            </a>
+            </span>
             <h1 className="text-3xl  font-bold">Address</h1>
-            <a
+            <span
               href="hello"
               className="mt-4  mb-12 md:text-right font-semibold text-blue-700 block uppercase"
             >
               TF-328 Deans Trade Center
               <br />
               Peshawar, Pakistan
-            </a>
+            </span>
             <h1 className="text-3xl  font-bold">Social</h1>
             <ul className="flex">
               {contactLinks.map((el) => (
