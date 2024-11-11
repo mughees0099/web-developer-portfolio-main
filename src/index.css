@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: 2px !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.switch {
+  width: 160px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif; /* A modern sans-serif font */
+  font-size: 2em; /* A larger size for more impact */
+  font-weight: 700; /* Extra bold weight */
+  letter-spacing: 2px; /* Slightly more letter spacing */
+  text-transform: uppercase; /* Text in uppercase */
+  color: #333; /* A bright color for more visibility */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for a 3D effect */
+  transition: all 0.3s ease; /* Transition for hover effect */
+}
+
+.logo:hover {
+  color: #000; /* Change color on hover */
+  text-shadow: none; /* Remove text shadow on hover */
+}
