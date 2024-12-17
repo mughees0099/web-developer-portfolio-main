@@ -125,11 +125,7 @@ const Card2 = () => {
       }}
       class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
     >
-      <a
-        href="https://corvit-site.vercel.app/"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="https://corvit.edu.pk/" target="_blank" rel="noreferrer">
         <img
           class="rounded-t-lg w-full"
           src="https://res.cloudinary.com/dwn3n5zdb/image/upload/v1731311698/Screenshot_2024-11-11_124749_osyp8z.png"
@@ -147,7 +143,7 @@ const Card2 = () => {
           industry-relevant skills.
         </p>
         <a
-          href="https://corvit-site.vercel.app/"
+          href="https://corvit.edu.pk/"
           target="_blank"
           class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300"
           rel="noreferrer"
