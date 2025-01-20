@@ -5,10 +5,7 @@ import { ThemeContext } from "../themeProvider";
 const Contact = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("submitted");
-  }
+
   return (
     <div
       id="contact"
@@ -30,7 +27,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-between items-center md:items-stretch  flex-col md:flex-row pb-10">
           <div className="w-full md:pr-8">
-            <form onSubmit={(e) => handleSubmit(e)}>
+            <form>
               <div className="my-6">
                 <label
                   htmlhtmor="name"
@@ -94,7 +91,7 @@ const Contact = () => {
                   </a>
                 </div>
                 <button className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400">
-                  <a href="mailto:mugheesj75@gmail.com">Submit</a>
+                  Submit
                 </button>
               </div>
             </form>
@@ -119,7 +116,7 @@ const Contact = () => {
                 <a
                   href={el.link}
                   key={el.url}
-                  className="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"
+                  className="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-[1.1] flex flex-col justify-center items-center"
                 >
                   <img alt="" src={el.url} />
                   {/* <p className="text-md mt-2 hover:hidden">{el.name}</p> */}
