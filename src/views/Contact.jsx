@@ -5,6 +5,10 @@ import { ThemeContext } from "../themeProvider";
 const Contact = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("submitted");
+  }
   return (
     <div
       id="contact"
@@ -26,11 +30,11 @@ const Contact = () => {
         </div>
         <div className="flex justify-between items-center md:items-stretch  flex-col md:flex-row pb-10">
           <div className="w-full md:pr-8">
-            <form>
-              <div class="my-6">
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <div className="my-6">
                 <label
-                  for="name"
-                  class={
+                  htmlhtmor="name"
+                  className={
                     darkMode
                       ? "block mb-2 text-lg font-medium text-gray-900"
                       : "block mb-2 text-lg font-medium text-white"
@@ -41,15 +45,15 @@ const Contact = () => {
                 <input
                   type="email"
                   id="name"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your name"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label
-                  for="email"
-                  class={
+                  htmlFor="email"
+                  className={
                     darkMode
                       ? "block mb-2 text-lg font-medium text-gray-900"
                       : "block mb-2 text-lg font-medium text-white"
@@ -60,15 +64,15 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your email"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label
-                  for="message"
-                  class={
+                  htmor="message"
+                  className={
                     darkMode
                       ? "block mb-2 text-lg font-medium text-gray-900"
                       : "block mb-2 text-lg font-medium text-white"
@@ -78,7 +82,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your message"
                   required
                 />
@@ -114,6 +118,7 @@ const Contact = () => {
               {contactLinks.map((el) => (
                 <a
                   href={el.link}
+                  key={el.url}
                   className="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"
                 >
                   <img alt="" src={el.url} />

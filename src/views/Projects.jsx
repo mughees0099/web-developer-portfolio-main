@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Card, Card1, Card2, Card3 } from "../components/Card";
+import { Card, Card1, Card2, Card3, Card4, Card5 } from "../components/Card";
 import { ThemeContext } from "../themeProvider";
 
 const Projects = () => {
@@ -21,6 +21,8 @@ const Projects = () => {
           <Card1 />
           <Card2 />
           <Card3 />
+          <Card4 />
+          <Card5 />
         </div>
       </div>
     </div>

@@ -64,6 +64,7 @@ const Home = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="mr-5 cursor-pointer mt-8 hover:scale-125"
+                  key={el.url}
                 >
                   <img alt="" src={el.url} />
                   {/* <p className="text-md mt-2 hover:hidden">{el.name}</p> */}

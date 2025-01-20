@@ -35,6 +35,7 @@ const Services = () => {
                   visible: { opacity: 1, scale: 1 },
                   hidden: { opacity: 0, scale: 0 },
                 }}
+                key={el.name}
                 className={
                   theme.state.darkMode
                     ? "md:w-96 p-4 bg-white rounded-lg flex items-center flex-col mt-8"
