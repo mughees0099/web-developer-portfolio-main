@@ -188,7 +188,7 @@ const Contact = () => {
             : "w-full bg-gray-900 text-white text-lg py-3 flex justify-center md:mt-20"
         }
       >
-        <p> Made in &copy; {new Date().getFullYear()} with ❤️ by Mughees </p>
+        <p> Made in {new Date().getFullYear()} with ❤️ by Mughees </p>
       </div>
     </div>
   );
