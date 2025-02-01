@@ -1,10 +1,58 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { contactLinks } from "../constants";
 import { ThemeContext } from "../themeProvider";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    setLoading(true);
+    e.preventDefault();
+    e.persist();
+
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+    try {
+      const response = await fetch("https://getform.io/f/aejjgkxb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      if (response.ok) {
+        Swal.fire({
+          title: "Mail Sent!",
+          text: "I'll get back to you soon😉.",
+          icon: "success",
+          timer: 1500,
+          showConfirmButton: false,
+        });
+        setLoading(false);
+        e.target.reset();
+      }
+    } catch (error) {
+      setLoading(false);
+      e.target.reset();
+      Swal.fire({
+        title: "Failed to send message!",
+        text: "Please try again later🥲",
+        icon: "error",
+        timer: 1500,
+        showConfirmButton: false,
+      });
+    }
+  };
 
   return (
     <div
@@ -27,7 +75,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-between items-center md:items-stretch  flex-col md:flex-row pb-10">
           <div className="w-full md:pr-8">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="my-6">
                 <label
                   htmlhtmor="name"
@@ -40,9 +88,12 @@ const Contact = () => {
                   Name
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   id="name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  name="name"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 
+                  "
+                  style={{ backgroundColor: "#f3f4f6", color: "#1f2937" }}
                   placeholder="Enter your name"
                   required
                 />
@@ -61,7 +112,9 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  style={{ backgroundColor: "#f3f4f6", color: "#1f2937" }}
                   placeholder="Enter your email"
                   required
                 />
@@ -79,7 +132,9 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   className="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  style={{ backgroundColor: "#f3f4f6", color: "#1f2937" }}
                   placeholder="Enter your message"
                   required
                 />
@@ -91,7 +146,7 @@ const Contact = () => {
                   </a>
                 </div>
                 <button className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400">
-                  Submit
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>
@@ -129,13 +184,11 @@ const Contact = () => {
       <div
         className={
           darkMode
-            ? "w-full bg-white text-black text-lg py-3 flex justify-center "
+            ? "w-full bg-white text-black text-lg py-3 flex  justify-center "
             : "w-full bg-gray-900 text-white text-lg py-3 flex justify-center md:mt-20"
         }
       >
-        Made with
-        <div className="text-red-500 px-2 text-2xl">&#10084;</div>
-        by Mughees
+        <p> Made in &copy; {new Date().getFullYear()} with ❤️ by Mughees </p>
       </div>
     </div>
   );
