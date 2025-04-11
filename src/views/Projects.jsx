@@ -1,5 +1,13 @@
 import React, { useContext } from "react";
-import { Card, Card1, Card2, Card3, Card4, Card5 } from "../components/Card";
+import {
+  Card,
+  Card1,
+  Card2,
+  Card3,
+  Card4,
+  Card5,
+  Card6,
+} from "../components/Card";
 import { ThemeContext } from "../themeProvider";
 
 const Projects = () => {
@@ -17,12 +25,13 @@ const Projects = () => {
         </h2>
 
         <div className="mt-8 grid sm:grid-cols-2 gap-4 justify-items-center ">
-          <Card />
+          <Card6 />
           <Card1 />
+          <Card5 />
+          <Card />
           <Card2 />
           <Card3 />
           <Card4 />
-          <Card5 />
         </div>
       </div>
     </div>

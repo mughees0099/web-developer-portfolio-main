@@ -218,6 +218,7 @@ const Card = () => {
     </motion.div>
   );
 };
+
 const Card4 = () => {
   return (
     <motion.div
@@ -297,11 +298,6 @@ const Card5 = () => {
           src="https://res.cloudinary.com/dwn3n5zdb/image/upload/v1731321124/Screenshot_2024-11-11_153146_z5cx9a.png"
           alt=""
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-t-lg">
-          <span className="text-white text-xl font-bold opacity-80">
-            Coming Soon....
-          </span>
-        </div>
       </a>
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -337,5 +333,61 @@ const Card5 = () => {
     </motion.div>
   );
 };
-export { Card, Card1, Card2, Card3, Card4, Card5 };
+const Card6 = () => {
+  return (
+    <motion.div
+      initial={"hidden"}
+      whileInView={"visible"}
+      variants={{
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+      className="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
+    >
+      <a href="https://ipsec.com.pk/" target="_blank" rel="noreferrer">
+        <img
+          className="rounded-t-lg w-full h-64"
+          src="https://res.cloudinary.com/dwn3n5zdb/image/upload/v1744390944/image_original_t94z8c.png"
+          alt=""
+        />
+      </a>
+      <div className="p-5">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          IPSEC
+        </h5>
+
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          I designed and developed the official website for IPSEC, a premier IT
+          training institute providing government-funded courses to students.
+          Built using the MERN stack, the platform offers a seamless user
+          experience with course listings, student enrollment management, and an
+          intuitive dashboard.
+        </p>
+        <a
+          href="https://ipsec.com.pk/"
+          target="_blank"
+          className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          rel="noreferrer"
+        >
+          Preview
+          <svg
+            className="ml-2 -mr-1 w-4 h-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </motion.div>
+  );
+};
+export { Card, Card1, Card2, Card3, Card4, Card5, Card6 };
 // export default Card;
+
+// IPSEC – IT Training Institute Portal
